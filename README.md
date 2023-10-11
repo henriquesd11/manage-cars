@@ -12,3 +12,10 @@ docker run --rm \
     -w /var/www/html \
     laravelsail/php81-composer:latest \
     composer install --ignore-platform-reqs
+
+DB_CONNECTION=pgsql \
+DB_HOST=pgsql \
+DB_PORT=5432 \
+DB_DATABASE=manage_cars \
+DB_USERNAME=root \
+DB_PASSWORD=passws123

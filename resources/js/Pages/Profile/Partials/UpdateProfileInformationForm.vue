@@ -100,16 +100,3 @@ const form = useForm({
         </form>
     </section>
 </template>
-
-<script>
-    export default {
-        data () {
-            return {
-
-            }
-        },
-        mounted() {
-            console.log("teste");
-        }
-    }
-</script>

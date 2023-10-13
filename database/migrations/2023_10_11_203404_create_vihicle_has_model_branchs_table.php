@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('vihicle_has_model_branchs', function (Blueprint $table) {
-            $table->integer('vihicle_id')->nullable(false);
+        Schema::create('vehicle_has_model_branchs', function (Blueprint $table) {
+            $table->integer('vehicle_id')->nullable(false);
             $table->integer('modal_branch_id')->nullable(false);
 
-            $table->foreign('vihicle_id')->references('id')->on('vehicles');
+            $table->foreign('vehicle_id')->references('id')->on('vehicles');
             $table->foreign('modal_branch_id')->references('id')->on('model_has_brands');
         });
     }
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('vihicle_has_model_branchs');
+        Schema::dropIfExists('vehicle_has_model_branchs');
     }
 };
